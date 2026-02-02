@@ -81,12 +81,19 @@ export default function ProjectsSection() {
                       <span key={tag} className="px-3 py-1 text-xs text-pink-400 border border-pink-400/30 bg-pink-400/5">{tag}</span>
                     ))}
                   </div>
-                  <button className="self-start group/btn flex items-center gap-2 text-white hover:text-pink-400 transition-colors">
-                    <span className="text-sm font-medium tracking-wider uppercase">View Project</span>
-                    <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </button>
+                  {project.link && (
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="self-start group/btn flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+                    >
+                      <span className="text-sm font-medium tracking-wider uppercase">View Project</span>
+                      <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
               <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-transparent group-hover:border-pink-400 transition-colors duration-500" />

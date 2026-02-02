@@ -58,6 +58,7 @@ export const projects: Project[] = [
     status: 'Active',
     description: "You're looking at it right now. I mean, it's nothing special.",
     tags: ['Next.js', 'Tailwind CSS'],
+    link: 'https://github.com/LunarcatOwO/portfolio-reworked',
   },
 ];
 
