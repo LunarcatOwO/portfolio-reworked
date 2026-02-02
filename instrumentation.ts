@@ -14,6 +14,11 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-export { default as LoadingScreen } from './LoadingScreen';
-export { default as Navigation } from './Navigation';
-export { default as Footer } from './Footer';
+export async function register() {
+  console.log('\n');
+  console.log('Portfolio Reworked Copyright (C) 2026  LunarcatOwO');
+  console.log('This program comes with ABSOLUTELY NO WARRANTY.');
+  console.log('This is free software, and you are welcome to redistribute it');
+  console.log('under certain conditions.');
+  console.log('\n');
+}
