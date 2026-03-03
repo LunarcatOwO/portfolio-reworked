@@ -6,7 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "update-packages": "npx npm-check-updates -u && npm install"
+    "update-packages": "npx npm-check-updates -u && npm install",
+    "patch": "npm run update-packages && npm version patch && git push --follow-tags",
+    "minor": "npm run update-packages && npm version minor && git push --follow-tags",
+    "major": "npm run update-packages && npm version major && git push --follow-tags"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
