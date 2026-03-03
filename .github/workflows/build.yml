@@ -18,14 +18,17 @@ jobs:
         permissions:
           contents: write
           packages: write
-        outputs:
-          version: ${{ steps.version.outputs.current }}
-          version_changed: ${{ steps.version.outputs.changed }}
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
                   fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: 'npm'
 
             - name: Check version change
               id: version
@@ -66,12 +69,6 @@ jobs:
                     echo "changed=false" >> $GITHUB_OUTPUT
                     echo "Version unchanged"
                   fi
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '22'
-                  cache: 'npm'
 
             - name: Install dependencies
               run: npm install
@@ -157,9 +154,12 @@ jobs:
                       type=local,dest=/tmp/.buildx-cache-new,mode=max
 
             - name: Move cache
+              if: always()
               run: |
                   rm -rf /tmp/.buildx-cache
-                  mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+                  if [ -d /tmp/.buildx-cache-new ]; then
+                    mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+                  fi
 
             - name: Create and push git tag with SHA
               if: github.event_name != 'pull_request' && steps.version.outputs.changed == 'true'
