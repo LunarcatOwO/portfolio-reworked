@@ -129,7 +129,7 @@ jobs:
               id: meta
               uses: docker/metadata-action@v5
               with:
-                  images: ghcr.io/${{ github.repository_owner }}/portfolio-v2-iseal
+                  images: ghcr.io/${{ github.repository_owner }}/portfolio-v2-reworked
                   tags: |
                       type=ref,event=branch
                       type=sha,format=short
