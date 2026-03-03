@@ -70,9 +70,9 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Portfolio V2',
+    title: 'Portfolio Reworked',
     status: 'Active',
-    description: "You're looking at it right now. I mean, it's nothing special.",
+    description: "You're looking at it right now...",
     tags: ['Next.js', 'Tailwind CSS'],
     link: 'https://github.com/LunarcatOwO/portfolio-reworked',
   },
