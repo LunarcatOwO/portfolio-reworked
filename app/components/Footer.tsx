@@ -16,6 +16,7 @@
 
 'use client';
 
+import Image from 'next/image';
 import { siteConfig } from '../data';
 
 export default function Footer() {
@@ -29,7 +30,7 @@ export default function Footer() {
             <span>by</span>
             <span className="text-pink-400 font-semibold">LunarcatOwO</span>
             <span>using</span>
-            <span className="text-white font-semibold">Next.js</span>
+            <Image src="/next.svg" alt="Next.js" width={64} height={16} className="invert" />
           </div>
           <p className="text-center">
             This project is{' '}

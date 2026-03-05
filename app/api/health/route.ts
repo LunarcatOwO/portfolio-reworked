@@ -6,5 +6,6 @@ export async function GET() {
     version: process.env.APP_VERSION || 'unknown',
     timestamp: Date.now(),
     uptime: process.uptime(),
+    readme: 'Why are you here?'
   });
 }
