@@ -79,14 +79,13 @@ export const projects: Project[] = [
 ];
 
 export const siteConfig = {
-  name: 'LunarcatOwO',
-  title: 'LunarcatOwO.space',
+  title: 'lunarcatowo.space',
   description: 'Just doing things.',
   longDescription: 'Just a random student who also happens to be technically a full stack. I also stream and post videos of me playing games.',
   url: 'https://lunarcatowo.space',
   links: {
     github: 'https://github.com/LunarcatOwO',
-    contact: 'mailto:contact@lunarcatowo.space',
+    contact: 'mailto:root@lunarcatowo.space',
     twitter: 'https://x.com/LunarcatOwO',
     youtube: 'https://youtube.com/@LunarcatOwO',
   },

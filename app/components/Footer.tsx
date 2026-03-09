@@ -42,7 +42,7 @@ export default function Footer() {
             >
               open source
             </a>
-            {' '}© {new Date().getFullYear()} {siteConfig.name}. Licensed Under GPL-3.0.
+            {' '}© {new Date().getFullYear()} LunarcatOwO. Licensed Under GPL-3.0.
           </p>
         </div>
       </div>
