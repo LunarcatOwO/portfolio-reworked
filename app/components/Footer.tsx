@@ -17,7 +17,6 @@
 'use client';
 
 import Image from 'next/image';
-import { siteConfig } from '../data';
 
 export default function Footer() {
   return (
