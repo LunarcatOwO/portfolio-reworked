@@ -35,7 +35,7 @@ export default function Footer() {
           <p className="text-center">
             This project is{' '}
             <a 
-              href="https://github.com/LunarcatOwO/portfolio-endfield" 
+              href="https://github.com/LunarcatOwO/portfolio-reworked" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-pink-400 hover:text-pink-300 transition-colors underline"
